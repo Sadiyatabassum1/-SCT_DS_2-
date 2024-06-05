@@ -1,0 +1,5 @@
+# Summary statistics for numerical columns
+print(df.describe())
+
+# Summary statistics for categorical columns
+print(df.describe(include=['O']))

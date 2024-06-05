@@ -1,0 +1,45 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Set the aesthetic style of the plots
+sns.set_style("whitegrid")
+
+# Count plot of Survived
+plt.figure(figsize=(8, 6))
+sns.countplot(x='Survived', data=df)
+plt.title('Count of Survival')
+plt.xlabel('Survived')
+plt.ylabel('Count')
+plt.show()
+
+# Count plot of Pclass
+plt.figure(figsize=(8, 6))
+sns.countplot(x='Pclass', data=df)
+plt.title('Count of Passengers by Class')
+plt.xlabel('Pclass')
+plt.ylabel('Count')
+plt.show()
+
+# Distribution of Age
+plt.figure(figsize=(10, 6))
+sns.histplot(df['Age'], bins=30, kde=True)
+plt.title('Distribution of Age')
+plt.xlabel('Age')
+plt.ylabel('Frequency')
+plt.show()
+
+# Survival rate by Pclass
+plt.figure(figsize=(8, 6))
+sns.barplot(x='Pclass', y='Survived', data=df)
+plt.title('Survival Rate by Class')
+plt.xlabel('Pclass')
+plt.ylabel('Survival Rate')
+plt.show()
+
+# Survival rate by Sex
+plt.figure(figsize=(8, 6))
+sns.barplot(x='Sex', y='Survived', data=df)
+plt.title('Survival Rate by Gender')
+plt.xlabel('Sex')
+plt.ylabel('Survival Rate')
+plt.show()

@@ -1,0 +1,1 @@
+This simplified example provides a basic approach to data cleaning and exploratory data analysis for the Titanic dataset. We handled missing values, removed duplicates, and visualized key aspects of the data to understand relationships between variables and identify patterns. This basic EDA sets a good foundation for more detailed analysis or building predictive models

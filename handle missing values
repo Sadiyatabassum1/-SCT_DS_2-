@@ -1,0 +1,11 @@
+# Fill missing Age values with the median age
+df['Age'].fillna(df['Age'].median(), inplace=True)
+
+# Drop the Cabin column due to high number of missing values
+df.drop(columns=['Cabin'], inplace=True)
+
+# Fill missing Embarked values with the mode
+df['Embarked'].fillna(df['Embarked'].mode()[0], inplace=True)
+
+# Verify that there are no more missing values
+print(df.isnull().sum())
